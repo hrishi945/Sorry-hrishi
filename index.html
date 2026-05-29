@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Secret Access</title>
+
+<style>
+
+body{
+background:black;
+color:#00ffcc;
+font-family:monospace;
+text-align:center;
+padding-top:100px;
+}
+
+.box{
+width:85%;
+margin:auto;
+border:2px solid #00ffcc;
+padding:30px;
+border-radius:20px;
+}
+
+input{
+padding:12px;
+width:250px;
+border:none;
+border-radius:10px;
+margin-top:20px;
+text-align:center;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#00ffcc;
+margin-top:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+#step2{
+display:none;
+}
+
+#final{
+display:none;
+margin-top:30px;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<!-- STEP 1 -->
+
+<div id="step1">
+
+<h2>🔒 DEVICE SECURITY CHECK</h2>
+
+<p>
+Enter your phone lock password
+</p>
+
+<input
+type="password"
+id="pass"
+placeholder="Enter Password">
+
+<br>
+
+<button onclick="nextStep()">
+OK
+</button>
+
+</div>
+
+<!-- STEP 2 -->
+
+<div id="step2">
+
+<h2>Identity Verification ❤️</h2>
+
+<p>
+Who is Hrishi?
+</p>
+
+<input
+type="text"
+id="answer"
+placeholder="Type here">
+
+<br>
+
+<button onclick="showMessage()">
+Verify
+</button>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+
+<div id="final">
+
+<h1>Access Granted ❤️</h1>
+
+<p>
+You successfully unlocked
+Hrishi's hidden feelings 🥺
+</p>
+
+<h2>
+Please Be My Girlfriend ❤️
+</h2>
+
+<p>
+Officially upgrading from
+Half BF to Forever BF 😄
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function nextStep(){
+
+document.getElementById("step1")
+.style.display = "none";
+
+document.getElementById("step2")
+.style.display = "block";
+
+}
+
+function showMessage(){
+
+let ans =
+document.getElementById("answer")
+.value
+.toLowerCase();
+
+if(ans == "bf" || ans == "half bf"){
+
+document.getElementById("step2")
+.style.display = "none";
+
+document.getElementById("final")
+.style.display = "block";
+
+}else{
+
+alert("Wrong Answer ❌");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
