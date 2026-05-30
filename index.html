@@ -165,5 +165,75 @@ NO 💔
 </button>
 
 </div>
+  <script>
+
+function nextStep(){
+
+document.getElementById("step1")
+.style.display = "none";
+
+document.getElementById("step2")
+.style.display = "block";
+
+}
+
+function showMessage(){
+
+let ans =
+document.getElementById("answer")
+.value
+.toLowerCase();
+
+if(ans == "bf" || ans == "half bf"){
+
+document.getElementById("step2")
+.style.display = "none";
+
+document.getElementById("final")
+.style.display = "block";
+
+}else{
+
+alert("Wrong Answer ❌");
+
+}
+
+}
+
+function yesClicked(){
+
+alert(
+"Thank You ❤️\n\nGudiya, thank you for giving us another chance 🌹"
+);
+
+}
+
+function noClicked(){
+
+let first =
+confirm("Are you sure? 🥺");
+
+if(first){
+
+let second =
+confirm("Really sure? ❤️");
+
+if(second){
+
+alert(
+"I will try in a different way ❤️"
+);
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
 
 
