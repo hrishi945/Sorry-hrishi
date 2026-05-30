@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Secret Access</title>
+<title>For My Gudiya ❤️</title>
 
 <style>
 
 body{
 background:black;
-color:#00ffcc;
-font-family:monospace;
+color:white;
+font-family:Arial,sans-serif;
 text-align:center;
-padding-top:100px;
+margin:0;
+padding:20px;
 }
 
 .box{
-width:85%;
+max-width:900px;
 margin:auto;
 border:2px solid #00ffcc;
-padding:30px;
 border-radius:20px;
+padding:20px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#00ffcc;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
 }
 
 input{
 padding:12px;
 width:250px;
-border:none;
 border-radius:10px;
-margin-top:20px;
+border:none;
 text-align:center;
-}
-
-button{
-padding:12px 25px;
-border:none;
-border-radius:10px;
-background:#00ffcc;
-margin-top:20px;
-cursor:pointer;
-font-weight:bold;
 }
 
 #step2{
@@ -47,12 +47,15 @@ display:none;
 
 #final{
 display:none;
-margin-top:30px;
-color:white;
+}
+
+img{
+width:100%;
+max-width:900px;
+border-radius:20px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -65,16 +68,13 @@ color:white;
 
 <h2>🔒 DEVICE SECURITY CHECK</h2>
 
-<p>
-Enter your phone lock password
-</p>
+<p>Enter your phone lock password</p>
 
 <input
 type="password"
-id="pass"
 placeholder="Enter Password">
 
-<br>
+<br><br>
 
 <button onclick="nextStep()">
 OK
@@ -86,73 +86,41 @@ OK
 
 <div id="step2">
 
-<h2>Identity Verification ❤️</h2>
-
-<p>
-Who is Hrishi?
-</p>
-
-<input
-type="text"
-id="answer"
-placeholder="Type here">
+<h2>❤️ Who is Hrishi? ❤️</h2>
 
 <br>
 
-<button onclick="showMessage()">
-Verify
+<button onclick="openFinal()">
+Best Friend 😊
+</button>
+
+<br><br>
+
+<button onclick="openFinal()">
+Half BF 😘
+</button>
+
+<br><br>
+
+<button onclick="openFinal()">
+BF ❤️
 </button>
 
 </div>
-  <div id="final">
 
-<audio autoplay loop>
+<!-- FINAL PAGE -->
+
+<div id="final">
+
+<audio id="bgmusic" loop>
 <source src="Jaadui.mp3" type="audio/mpeg">
 </audio>
 
 <h1>For My Gudiya ❤️</h1>
 
-<img src="IMG_2240.png"
-style="
-width:100%;
-max-width:500px;
-border-radius:20px;
-">
-
-<p style="
-margin-top:20px;
-line-height:1.8;
-font-size:18px;
-">
-
-Tum meri sab kuch thi... ❤️
-
-Par jab se tum mujhe chhod ke gayi ho,
-main tut sa gaya hu.
-
-Please mujhe ek aur mauka do.
-
-Main sab thik karna chahta hu.
-
-Main tumse koi expectations nahi rakhunga.
-
-Bina kisi expectation ke,
-tumhari khushi ke liye har chij karunga.
-
-Tumhare bagair sab suna suna lagta hai.
-
-Tumhare sath bitaye har pal
-mere liye sabse khoobsurat memories hain. ❤️
+<img src="IMG_2263.png">
 
 <br><br>
-
-<b>
-Letting go is easy,
-and waiting for you is harder,
-and I choose the harder side ❤️
-</b>
-
-</p>
 
 <h2>Will You Be My Girlfriend? ❤️</h2>
 
@@ -165,63 +133,53 @@ NO 💔
 </button>
 
 </div>
-  <script>
+
+</div>
+
+<script>
 
 function nextStep(){
 
-document.getElementById("step1")
-.style.display = "none";
-
-document.getElementById("step2")
-.style.display = "block";
+document.getElementById("step1").style.display="none";
+document.getElementById("step2").style.display="block";
 
 }
 
-function showMessage(){
+function openFinal(){
 
-let ans =
-document.getElementById("answer")
-.value
-.toLowerCase();
+document.getElementById("step2").style.display="none";
+document.getElementById("final").style.display="block";
 
-if(ans == "bf" || ans == "half bf"){
+var music=document.getElementById("bgmusic");
 
-document.getElementById("step2")
-.style.display = "none";
-
-document.getElementById("final")
-.style.display = "block";
-
-}else{
-
-alert("Wrong Answer ❌");
-
-}
+music.play().catch(()=>{});
 
 }
 
 function yesClicked(){
 
 alert(
-"Thank You ❤️\n\nGudiya, thank you for giving us another chance 🌹"
+"Hrishi Says ❤️\n\nThank You Gudiya ❤️\n\nThank you for giving us another chance 🌹"
 );
 
 }
 
 function noClicked(){
 
-let first =
-confirm("Are you sure? 🥺");
+let first=confirm(
+"Are you sure? 🥺"
+);
 
 if(first){
 
-let second =
-confirm("Really sure? ❤️");
+let second=confirm(
+"Really sure? ❤️"
+);
 
 if(second){
 
 alert(
-"I will try in a different way ❤️"
+"Hrishi Says ❤️\n\nI will try in a different way ❤️\n\nBecause some people are worth waiting for... 🌹"
 );
 
 }
@@ -233,7 +191,6 @@ alert(
 </script>
 
 </body>
-
 </html>
 
 
