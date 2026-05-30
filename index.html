@@ -104,68 +104,66 @@ Verify
 </button>
 
 </div>
+  <div id="final">
 
-<!-- FINAL MESSAGE -->
+<audio autoplay loop>
+<source src="Jaadui.mp3" type="audio/mpeg">
+</audio>
 
-<div id="final">
+<h1>For My Gudiya ❤️</h1>
 
-<h1>Access Granted ❤️</h1>
+<img src="IMG_2240.png"
+style="
+width:100%;
+max-width:500px;
+border-radius:20px;
+">
 
-<p>
-You successfully unlocked
-Hrishi's hidden feelings 🥺
+<p style="
+margin-top:20px;
+line-height:1.8;
+font-size:18px;
+">
+
+Tum meri sab kuch thi... ❤️
+
+Par jab se tum mujhe chhod ke gayi ho,
+main tut sa gaya hu.
+
+Please mujhe ek aur mauka do.
+
+Main sab thik karna chahta hu.
+
+Main tumse koi expectations nahi rakhunga.
+
+Bina kisi expectation ke,
+tumhari khushi ke liye har chij karunga.
+
+Tumhare bagair sab suna suna lagta hai.
+
+Tumhare sath bitaye har pal
+mere liye sabse khoobsurat memories hain. ❤️
+
+<br><br>
+
+<b>
+Letting go is easy,
+and waiting for you is harder,
+and I choose the harder side ❤️
+</b>
+
 </p>
 
-<h2>
-Please Be My Girlfriend ❤️
-</h2>
+<h2>Will You Be My Girlfriend? ❤️</h2>
 
-<p>
-Officially upgrading from
-Half BF to Forever BF 😄
-</p>
+<button onclick="yesClicked()">
+YES ❤️
+</button>
+
+<button onclick="noClicked()">
+NO 💔
+</button>
 
 </div>
 
-</div>
 
-<script>
-
-function nextStep(){
-
-document.getElementById("step1")
-.style.display = "none";
-
-document.getElementById("step2")
-.style.display = "block";
-
-}
-
-function showMessage(){
-
-let ans =
-document.getElementById("answer")
-.value
-.toLowerCase();
-
-if(ans == "bf" || ans == "half bf"){
-
-document.getElementById("step2")
-.style.display = "none";
-
-document.getElementById("final")
-.style.display = "block";
-
-}else{
-
-alert("Wrong Answer ❌");
-
-}
-
-}
-
-</script>
-
-</body>
-
-</html>
